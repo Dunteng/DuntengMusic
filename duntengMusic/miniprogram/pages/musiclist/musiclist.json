@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "musiclist-cmp": "/components/musiclist/cmp"
+  }
+}

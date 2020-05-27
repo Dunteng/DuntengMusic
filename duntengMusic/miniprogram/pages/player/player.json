@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "progress-bar": "../../components/progress-bar/cmp",
+    "lyric": "../../components/lyric/cmp"
+  },
+  "disableScroll": true
+}

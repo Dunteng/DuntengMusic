@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "blog-card": "/components/blog-card/cmp",
+    "blog-ctrl": "/components/blog-ctrl/cmp"
+  },
+  "navigationBarTitleText": "我的乐评",
+  "enablePullDownRefresh": true
+}

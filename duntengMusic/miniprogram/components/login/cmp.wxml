@@ -1,0 +1,9 @@
+<!--components/login/cmp.wxml-->
+<bottom-layer layerShow="{{show}}">
+  <view slot="layer-content">
+    <button class="login" 
+            open-type="getUserInfo"
+            bindgetuserinfo="onGotUserInfo"
+            >获取微信授权信息</button>
+  </view>
+</bottom-layer>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "musiclist-cmp": "/components/musiclist/cmp"
+  },
+  "navigationBarTitleText": "播放历史"
+}

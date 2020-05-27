@@ -1,0 +1,34 @@
+<!--components/blog-ctrl/cmp.wxml-->
+<view class="ctrl">
+  <view class="ctrl-item" bindtap="onComment">
+    <i class="iconfont icon-pinglun icon"></i>
+    <text>评论</text>
+  </view>
+  <view class="ctrl-item share">
+    <button open-type="share" 
+            size="mini" class="share-btn"
+            data-blogid="{{blogId}}" data-blog="{{blog}}">
+      <i class="iconfont icon-fenxiang icon"></i>
+      <text>分享</text>
+    </button>
+  </view>
+</view>
+
+<login-cmp show="{{loginShow}}"
+           bind:loginsuccess="onLoginsuccess"
+           bind:loginfail="onLoginfail"/>
+
+<bottom-layer  layerShow="{{layerShow}}">
+  <!-- <view slot="layer-content" class="slot">
+    <textarea name="content" class="comment-content" 
+              placeholder="分享你的评论~" value="{{content}}"
+              fixed="true"  bindinput="onInput"></textarea>
+    <button size="mini" class="send" catchtap="onSend">发布</button>
+  </view> -->
+  <view slot="layer-content" class="slot">
+    <textarea name="content" class="comment-content" 
+              placeholder="分享你的评论~" value="{{content}}"
+              fixed="true"  bindinput="onInput"></textarea>
+    <button size="mini" class="send" catchtap="onSend">发布</button>
+  </view>
+</bottom-layer>

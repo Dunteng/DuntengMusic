@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "search-cmp": "../../components/search/cmp",
+    "login-cmp": "/components/login/cmp",
+    "blog-card": "/components/blog-card/cmp",
+    "blog-ctrl": "/components/blog-ctrl/cmp"
+  },
+  "navigationBarTitleText": "乐评",
+  "enablePullDownRefresh": true
+  
+}

@@ -1,0 +1,36 @@
+<!--pages/blog-edit/blog-edit.wxml-->
+<view class="container">
+  <textarea class="content" 
+            placeholder="分享你的乐评叭~"
+            bindinput="onInput"
+            bindfocus="onFocus"
+            bindblur="onBlur"
+            maxlength="140"
+            auto-focus
+            ></textarea>
+
+  <view class="image-list">
+    <!-- 显示图片 -->
+    <block wx:for="{{images}}" wx:key="*this">
+      <view class="image-wrap">
+        <image class="image" src="{{item}}" 
+               mode="aspectFill" 
+               data-imgsrc="{{item}}"
+               bindtap="onPreivewImage"></image>
+        <i class="iconfont icon-shanchu" bindtap="onDelImage" data-index="{{index}}"></i>
+      </view>
+    </block>
+    <!-- 选择图片 -->
+    <view class="image-wrap selectphoto" 
+          bindtap="onChooseImage"
+          hidden="{{!selectPhoto}}">
+      <i class="iconfont icon-add-fill"></i>
+    </view>
+  </view>
+</view>
+
+<view class="footer" style="bottom:{{footerBottom}}px">
+  <!-- 内联样式的bottom，配合聚焦上移的动作；  注意px不要漏了 -->
+  <text class="words-num">{{wordsNum}}</text>
+  <button size="mini" class="send-btn" bindtap="send">发布</button>
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "login-cmp": "/components/login/cmp",
+    "bottom-layer": "/components/bottom-layer/cmp"
+  }
+}

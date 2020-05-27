@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "bottom-layer": "/components/bottom-layer/cmp"
+  }
+}

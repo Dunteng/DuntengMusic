@@ -1,0 +1,7 @@
+<view class="layer" hidden="{{!layerShow}}">
+  <view class="panel">
+    <i class="iconfont icon-shanchu" bindtap="onClose"></i>
+    <!-- slot插槽  具名插槽 -->
+    <slot name="layer-content"></slot>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+<view wx:if="{{showTheTrueFace}}">
+<!-- 首页轮播 -->
+<swiper class="swiper"  autoplay="true" interval="3200" duration="1000" circular="true">
+  <block wx:for="{{swiperImgUrls}}" wx:key = "{{item.id}}">
+    <swiper-item >
+      <image src="{{item.imageUrl}}"  class="img"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 歌单 -->
+<view class="playlist-container" >  
+  <block wx:for = "{{playlist}}" wx:key="{{_id}}">
+    <playlist-cmp playlistItem="{{item}}"></playlist-cmp>
+  </block>
+</view>
+
+</view>
+
+<view wx:if="{{!showTheTrueFace}}">
+  <!-- <view style="font-weight:bolder;color: red;">
+    什么是音乐？
+  </view>
+  <view>
+  音乐是一种艺术形式和文化活动，其媒介是按时组织的声音。一般音乐的定义包括共同元件，例如音调，节奏，动态，和的声波品质音色和纹理。不同样式或类型音乐可能会强调，不强调或忽略其中的某些元素。音乐是用各种各样的乐器和声乐技术演奏的，从唱歌到说唱 ; 仅存在器乐作品，仅存在声乐作品以及将唱歌和乐器结合在一起的作品。
+  在最一般的形式中，将音乐描述为一种艺术形式或文化活动的活动包括音乐作品的创作，对音乐的批评，对音乐历史的研究以及音乐的审美考核。古希腊和印度哲学家将音乐定义为水平排列为旋律而垂直排列为和声的音调。诸如“各个领域的和谐 ”和“这就是音乐在我耳边”之类的俗语指出了这样一种观念，即音乐通常是有序且听起来很愉快的。
+  </view>
+  <view style="font-weight:bolder;color: red;">
+    音乐的风格有哪些？
+  </view>
+  <view>
+  民歌(folk)原本是指每个民族的传统歌曲，今天我们所说的民歌 (folk)，大都是指流行曲年代的民歌 (folk)，所指的是主要以木吉它为伴奏乐器，以自然坦率方式歌唱，唱出大家纯朴生活感受的那种歌曲。
+  </view>
+  <view>管弦乐于17世纪出现，到 18世纪因海顿和莫扎特的作品而清楚地建立模式。 19世纪加入了些新乐器，乐团人数加大。 是西方古典/正统音乐的正宗。
+  </view>
+  <view>r&b的全名是 rhythm & blues，一般译作"节奏布鲁斯"。广义上， r&b可视为“黑人的流行音乐”，它源於黑人的blues音乐，是现今西行流行乐和摇滚乐的基础
+  </view>
+  <view>雷鬼
+起源于牙买加，70年代中期传入美国。它把非洲、拉丁美洲节奏和类似非洲流行的那种呼应式的歌唱法，与强劲的、有推动力的摇滚乐音响相结合。</view> -->
+</view>

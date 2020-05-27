@@ -1,0 +1,18 @@
+<!--components/blog-card/cmp.wxml-->
+<view class="blog">
+  <!-- 昵称、头像、发布时间 -->
+  <view class="blog-title">
+    <image class="blog-portrait" src="{{blog.avatarUrl}}" catchtap="onPreviewAvatar"></image>
+    <view class="blog-box">
+      <view class="blog-nickName">{{blog.nickName}}</view>
+      <view class="blog-time">{{_createTime}}</view>
+    </view>
+  </view>
+  <!-- 博文内容、图片 -->
+  <view class="blog-content" style='white-space:pre-wrap'>{{blog.content}}</view>
+  <view class="blog-img">
+    <block wx:for="{{blog.img}}" wx:key="{{index}}">
+      <image class="img" src="{{item}}" mode="aspectFill" catchtap="onPreviewImage" data-index="{{item}}"></image>
+    </block>
+  </view>
+</view>

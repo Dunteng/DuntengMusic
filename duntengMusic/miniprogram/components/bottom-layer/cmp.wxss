@@ -1,0 +1,29 @@
+.layer{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* 这上面五行代码是为了让layer层铺满整个屏幕，写弹窗效果时经常会这样用 */
+
+  z-index: 99;
+  text-align: center;
+  background: rgba(0, 0, 0, .6);
+}
+.panel{
+  position: absolute;
+  bottom: 0rpx;
+  left: 0;
+  min-height: 300rpx;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+/* 通过styleIsolation设置的外部样式类可以在组件内进行修改 */
+.layer .icon-shanchu{
+  position: absolute;
+  right: 0;
+  top: 10rpx;
+  padding: 20rpx;/*为了增加可点击区域大小*/
+}

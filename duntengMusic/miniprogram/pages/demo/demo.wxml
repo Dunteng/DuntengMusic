@@ -1,0 +1,9 @@
+<!--pages/demo/demo.wxml-->
+
+<!-- <button bindtap="getOpenid">
+  获取openid
+</button> -->
+
+<view>{{testObj.age}}</view>
+<view>{{testObj.name}}</view>
+<button bindtap="onChange">change</button>

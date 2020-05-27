@@ -1,0 +1,11 @@
+<!--components/search/cmp.wxml-->
+<view class="container">
+  <i class="iconfont icon-sousuo find"></i>
+  <input class="bar" 
+         placeholder="{{placeholder}}" 
+         placeholder-class="in-bar"
+         bindinput="onInput"></input>
+  <button size="mini" class="search" bindtap="onSearch">搜索</button>
+    <!-- 返回按钮 -->
+  <button size="mini" class="goback" bindtap="goback">返回</button>
+</view>

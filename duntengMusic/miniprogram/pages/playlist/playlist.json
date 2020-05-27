@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "playlist-cmp": "/components/playlist/cmp"
+  },
+  "navigationBarTitleText": "音乐",
+  "enablePullDownRefresh": true
+}
