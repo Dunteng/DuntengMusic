@@ -1,32 +1,39 @@
 <!-- miniprogram/pages/blog/blog.wxml -->
-<view class="container" wx:if="{{showTheTrueFace}}">
-  <!-- 头部 -->
-  <view class="header">
-    <view class="publish-container" bindtap="onPublish">
-      <i class="iconfont icon-fabu1"></i>
-    </view>
-    <view class="search-container">
-      <!-- 使用外部样式类的方式传给组件外部的样式类   等号左边随便命名，右边必须是目标类名 -->
-      <search-cmp iconfont="iconfont" icon-sousuo="icon-sousuo" bind:search="onSearch" bind:goback="onGoback" />
-    </view>
-  </view>
-  <!-- 博客卡片 -->
-  <view class="blog-list">
-    <block wx:for="{{blogList}}" wx:key="_id">
-      <view class="blog-panel">
-        <blog-card blog="{{item}}" data-blogid="{{item._id}}" bindtap="goComment" />
-        <blog-ctrl blogId="{{item._id}}" blog="{{item}}" openid="{{item._openid}}" iconfont="iconfont" icon-pinglun="icon-pinglun" icon-fenxiang="icon-fenxiang" class="blogCtrl" />
+<view class="page">
+  <view class="container" wx:if="{{showTheTrueFace}}">
+    <!-- 头部 -->
+    <view class="header">
+      <view class="publish-container" bindtap="onPublish">
+        <i class="iconfont icon-fabu1"></i>
       </view>
-    </block>
+      <view class="search-container">
+        <!-- 使用外部样式类的方式传给组件外部的样式类   等号左边随便命名，右边必须是目标类名 -->
+        <search-cmp iconfont="iconfont" icon-sousuo="icon-sousuo" bind:search="onSearch" bind:goback="onGoback" />
+      </view>
+    </view>
+    <!-- 博客卡片 -->
+    <view class="blog-list">
+      <block wx:for="{{blogList}}" wx:key="_id">
+        <view class="blog-panel">
+          <blog-card blog="{{item}}" data-blogid="{{item._id}}" bindtap="goComment" />
+          <blog-ctrl blogId="{{item._id}}" blog="{{item}}" openid="{{item._openid}}" iconfont="iconfont" icon-pinglun="icon-pinglun" icon-fenxiang="icon-fenxiang" class="blogCtrl" />
+        </view>
+      </block>
+    </view>
+    <!-- 授权组件底部弹出层 -->
+    <login-cmp show="{{show}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail"></login-cmp>
   </view>
-  <!-- 授权组件底部弹出层 -->
-  <login-cmp show="{{show}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail"></login-cmp>
-</view>
-<!-- 以下代码可忽略 -->
-<view wx:if="{{!showTheTrueFace}}">
-  <view style="font-weight:bolder;color: red;">一首曲子该从哪些方面写乐评？</view>
-  <view>1.专业的方面：演唱技巧、曲子的旋律走向、编曲、配乐、和声等等，这种乐评要言之有物，我们普通人，或者说没有专门学习过研究过音乐的人，一般都写不了；</view>
-  <view>2.这首曲子给你的感觉或说意境，听曲子时脑海里的画面；</view>
-  <view>3.如果你比较熟悉某个音乐人，你也可以写该音乐人在这首曲子中的突破变化；</view>
-  <view>4.给曲子写乐评最好不要只写缺点或突出缺点，就像你在黑这首曲子一样，如果你真的很想指出这首曲子的不足，也要委婉地、有艺术地写，要列举出这首曲子的优点并且言之有物；</view>
+  <!-- 以下代码可忽略 -->
+  <view wx:if="{{!showTheTrueFace}}">
+    <view style="font-weight:bolder;color: red;">一首曲子该从哪些方面写乐评？</view>
+    <view>1.专业的方面：演唱技巧、曲子的旋律走向、编曲、配乐、和声等等，这种乐评要言之有物，我们普通人，或者说没有专门学习过研究过音乐的人，一般都写不了；</view>
+    <view>2.这首曲子给你的感觉或说意境，听曲子时脑海里的画面；</view>
+    <view>3.如果你比较熟悉某个音乐人，你也可以写该音乐人在这首曲子中的突破变化；</view>
+    <view>4.给曲子写乐评最好不要只写缺点或突出缺点，就像你在黑这首曲子一样，如果你真的很想指出这首曲子的不足，也要委婉地、有艺术地写，要列举出这首曲子的优点并且言之有物；</view>
+  </view>
+  <view class="password-layer" wx:if="{{showTheTrueFace&&passwordLayer}}">
+    <image class="img" src="cloud://dev-r049g.6465-dev-r049g-1300732915/blog/1614160083272-380527.7384259209.jpg" mode="aspectFill" ></image>
+    <text class="tip">输入密钥</text>
+    <input class="password-input" type="number" maxlength="4" placeholder-class="in-bar" focus="{{true}}" bindinput="onInput"></input>
+  </view>
 </view>

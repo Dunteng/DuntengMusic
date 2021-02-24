@@ -45,7 +45,6 @@ App({
       name: 'login'
     }).then(res=>{
       this.globalData.openid = res.result.openid
-
       if (wx.getStorageSync(this.globalData.openid)==''){
         wx.setStorageSync(this.globalData.openid, []) // 一开始就获得openid作为本地缓存的key，初始时缓存为空数组
       }else{
@@ -63,8 +62,6 @@ App({
       // console.log(res.result[0].show)
       this.globalData.resData = res.result[0]
       this.globalData.showTheTrueFace = res.result[0].show
-      console.log(this.globalData.showTheTrueFace)
-      console.log(this.globalData.resData)
     })
   },
 
