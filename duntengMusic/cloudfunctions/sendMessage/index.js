@@ -13,7 +13,7 @@ exports.main = async (event, context) => {
       page: `/pages/blog-comment/blog-comment?blogId=${event.blogId}`,
       data: {
         thing1:{
-          value: "您的乐评动态有了新回复"
+          value: "发布的动态有新回复啦！"
         },
         thing3: {
           value: event.content  

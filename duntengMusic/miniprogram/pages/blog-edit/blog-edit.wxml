@@ -1,7 +1,7 @@
 <!--pages/blog-edit/blog-edit.wxml-->
 <view class="container">
   <textarea class="content" 
-            placeholder="分享你的乐评叭~"
+            placeholder="分享你的记录叭~"
             bindinput="onInput"
             bindfocus="onFocus"
             bindblur="onBlur"

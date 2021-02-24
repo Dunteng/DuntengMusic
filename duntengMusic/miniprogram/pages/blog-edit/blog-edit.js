@@ -52,7 +52,7 @@ Page({
     
     wx.chooseImage({
       count: remainNum, // count代表还能传几张图片
-      sizeType: ['original', 'compressed'], //原图还是压缩
+      sizeType: ['original'], //原图
       sourceType: ['album','camera'], // 相册还是拍照
       success: (res)=>{
         console.log(res)  // 这里的res就保存了我们选择要上传的图片列表

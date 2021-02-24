@@ -7,16 +7,9 @@
 
 <view class="nav" wx:if="{{showTheTrueFace}}">
   <view class="nav-item">
-    <navigator class="content" url="/pages/profile-playhistory/profile-playhistory" hover-class="none">
-      <i class="iconfont icon-jilu"></i>
-      <text class="text">最近播放</text>
-      <i class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></i>
-    </navigator>
-  </view>
-  <view class="nav-item">
     <navigator class="content" url="/pages/profile-bloghistory/profile-bloghistory" hover-class="none">
       <i class="iconfont icon-fabu2"></i>
-      <text class="text">我的乐评</text>
+      <text class="text">我的动态</text>
       <i class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></i>
     </navigator>
   </view>

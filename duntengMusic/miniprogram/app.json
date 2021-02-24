@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/playlist/playlist",
     "pages/blog/blog",
     "pages/profile/profile",
     "pages/demo/demo",
@@ -23,24 +22,20 @@
   "tabBar": {
     "color": "#474747",
     "selectedColor": "#d43c43",
-    "list": [{
-      "text": "音乐",
-      "pagePath": "pages/playlist/playlist",
-      "iconPath": "images/music.png",
-      "selectedIconPath": "images/music-actived.png"
-    },
-    {
-      "text": "乐评",
-      "pagePath": "pages/blog/blog",
-      "iconPath": "images/blog.png",
-      "selectedIconPath": "images/blog-actived.png"
-    },
-    {
-      "text": "我的",
-      "pagePath": "pages/profile/profile",
-      "iconPath": "images/profile.png",
-      "selectedIconPath": "images/profile-actived.png"
-    }]
+    "list": [
+      {
+        "text": "动态",
+        "pagePath": "pages/blog/blog",
+        "iconPath": "images/blog.png",
+        "selectedIconPath": "images/blog-actived.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/profile/profile",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-actived.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

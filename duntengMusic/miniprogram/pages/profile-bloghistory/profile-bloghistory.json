@@ -3,6 +3,6 @@
     "blog-card": "/components/blog-card/cmp",
     "blog-ctrl": "/components/blog-ctrl/cmp"
   },
-  "navigationBarTitleText": "我的乐评",
+  "navigationBarTitleText": "我的动态",
   "enablePullDownRefresh": true
 }
