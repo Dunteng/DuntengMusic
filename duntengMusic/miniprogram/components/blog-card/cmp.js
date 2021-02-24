@@ -20,17 +20,6 @@ Component({
     }
   },
 
-  // lifetimes:{
-  //   attached(){
-  //     // console.log(this.properties.blog)
-  //     let createTime = new Date(this.properties.blog.createTime)  // 要记得先new Date
-  //     let fmt = formatTime(createTime)
-  //     this.setData({
-  //       _createTime: fmt
-  //     })
-  //   }
-  // },
-
   /**
    * 组件的初始数据
    */

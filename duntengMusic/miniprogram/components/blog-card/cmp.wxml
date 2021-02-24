@@ -11,7 +11,7 @@
   <!-- 博文内容、图片 -->
   <view class="blog-content" style='white-space:pre-wrap'>{{blog.content}}</view>
   <view class="blog-img">
-    <block wx:for="{{blog.img}}" wx:key="{{index}}">
+    <block wx:for="{{blog.img}}" wx:key="_id">
       <image class="img" src="{{item}}" mode="aspectFill" catchtap="onPreviewImage" data-index="{{item}}"></image>
     </block>
   </view>
