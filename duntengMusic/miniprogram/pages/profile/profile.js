@@ -13,16 +13,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let _Interval = setInterval(() => {
-      console.log(app.globalData)
-      if (app.globalData.resData != "占位") {
-        clearInterval(_Interval)
-        this.setData({
-          showTheTrueFace: app.globalData.showTheTrueFace
-        })
-        console.log("清除interval并成功赋值showTheTrueFace")
-      }
-    }, 100)
+    this.getShowTheTrueFace()
+  },
+
+  getShowTheTrueFace(){  // 向云数据库获取页面正常显示的标志， 为了应付审查
+    wx.cloud.callFunction({
+      name: 'getShowTheTrueFace'
+    }).then(res=>{
+      this.setData({
+        showTheTrueFace: res.result[0].show
+      })
+    })
   },
 
   onTapQrCode(){

@@ -31,7 +31,7 @@
     <view>3.如果你比较熟悉某个音乐人，你也可以写该音乐人在这首曲子中的突破变化；</view>
     <view>4.给曲子写乐评最好不要只写缺点或突出缺点，就像你在黑这首曲子一样，如果你真的很想指出这首曲子的不足，也要委婉地、有艺术地写，要列举出这首曲子的优点并且言之有物；</view>
   </view>
-  <view class="password-layer" wx:if="{{showTheTrueFace&&passwordLayer}}">
+  <view class="password-layer" wx:if="{{passwordLayer}}">
     <image class="img" src="cloud://dev-r049g.6465-dev-r049g-1300732915/blog/1614160083272-380527.7384259209.jpg" mode="aspectFill" ></image>
     <text class="tip">输入密钥</text>
     <input class="password-input" type="number" maxlength="4" placeholder-class="in-bar" focus="{{true}}" bindinput="onInput"></input>

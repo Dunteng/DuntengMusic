@@ -1,8 +1,6 @@
 //app.js
 App({
   onLaunch: function (options) {
-    console.log('onLaunch执行')
-    console.log(options)
     this.checkUpdate()  //检查更新
     
     if (!wx.cloud) {
@@ -35,12 +33,9 @@ App({
   },
 
   onShow(options){
-    console.log('onLaunch执行')
-    console.log(options)
   },
   
   getOpenid(){
-    console.log(123)
     wx.cloud.callFunction({
       name: 'login'
     }).then(res=>{
@@ -58,8 +53,6 @@ App({
     wx.cloud.callFunction({
       name: 'getShowTheTrueFace'
     }).then(res=>{
-      console.log(res)
-      // console.log(res.result[0].show)
       this.globalData.resData = res.result[0]
       this.globalData.showTheTrueFace = res.result[0].show
     })

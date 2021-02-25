@@ -50,9 +50,28 @@ Page({
     //还能再选几张图片
     let remainNum = MAX_IMG_NUM - this.data.images.length
     
-    wx.chooseImage({
+    // wx.chooseImage({
+    //   count: remainNum, // count代表还能传几张图片
+    //   sizeType: ['original'], //原图
+    //   sourceType: ['album','camera'], // 相册还是拍照
+    //   success: (res)=>{
+    //     console.log(res)  // 这里的res就保存了我们选择要上传的图片列表
+    //       this.setData({
+    //         images: this.data.images.concat(res.tempFilePaths),  // 由于我们可能是分多次的选择图片，所以直接赋给images的话只会覆盖原先的数据，所以最好用追加的方式，用concat
+    //       })
+
+    //     remainNum = MAX_IMG_NUM - this.data.images.length //更新remainNum用以判断能否继续添加图片
+    //     this.setData({
+    //       selectPhoto: remainNum<=0?false:true
+    //     })
+    //   },
+    // })
+
+    wx.chooseMedia({
+      mediaType: ['image', 'video'],
       count: remainNum, // count代表还能传几张图片
       sizeType: ['original'], //原图
+      maxDuration: 30,
       sourceType: ['album','camera'], // 相册还是拍照
       success: (res)=>{
         console.log(res)  // 这里的res就保存了我们选择要上传的图片列表
