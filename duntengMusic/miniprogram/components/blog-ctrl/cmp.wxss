@@ -22,12 +22,9 @@
   font-size: 32rpx;
 }
 
-
-.ctrl-item text {
-  font-size: 32rpx;
+.islike {
+  color: #d81e06;
 }
-
- /* 待修正👇 */
 
 .comment-content{
   width: 100%;

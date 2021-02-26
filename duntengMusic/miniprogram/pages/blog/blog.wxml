@@ -16,7 +16,7 @@
       <block wx:for="{{blogList}}" wx:key="_id">
         <view class="blog-panel">
           <blog-card blog="{{item}}" data-blogid="{{item._id}}" bindtap="goComment" />
-          <blog-ctrl blogId="{{item._id}}" blog="{{item}}" openid="{{item._openid}}" iconfont="iconfont" icon-pinglun="icon-pinglun" icon-fenxiang="icon-fenxiang" class="blogCtrl" />
+          <blog-ctrl blogId="{{item._id}}" isLike="{{item.isLike}}" blog="{{item}}" openid="{{item._openid}}" iconfont="iconfont" icon-pinglun="icon-pinglun" icon-like="icon-like" icon-dislike="icon-dislike" icon-fenxiang="icon-fenxiang" class="blogCtrl" />
         </view>
       </block>
     </view>

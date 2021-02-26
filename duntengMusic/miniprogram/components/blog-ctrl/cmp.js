@@ -8,13 +8,16 @@ Component({
   properties: {
     blogId: String,
     blog: Object,
+    isLike: Boolean,
     openid: String,
   },
 
   externalClasses:[
     "iconfont",
     "icon-pinglun",
-    "icon-fenxiang"
+    "icon-fenxiang",
+    "icon-dislike",
+    "icon-like"
   ],
 
   /**
@@ -25,7 +28,7 @@ Component({
     loginShow: false,
     // 底部弹出层是否显示
     layerShow: false,
-    content: "",
+    content: ""
   },
 
   /**
@@ -81,6 +84,24 @@ Component({
         content: event.detail.value
       })
       // console.log(this.data.content)
+    },
+
+    like(e){
+      let query = e.currentTarget.dataset['param']
+      console.log(query)
+      db.collection('blog').where({
+        _id: this.properties.blogId
+      }).update({
+        data: {
+          isLike: query
+        },
+        success: function(res) {
+          console.log(res)
+        }
+      }),
+      this.setData({
+        isLike: !this.properties.isLike
+      })
     },
 
     onSend(){
