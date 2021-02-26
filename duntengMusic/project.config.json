@@ -70,20 +70,6 @@
 					"scene": null
 				},
 				{
-					"id": 2,
-					"name": "pages/musiclist/musiclist",
-					"pathName": "pages/musiclist/musiclist",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 3,
-					"name": "pages/player/player",
-					"pathName": "pages/player/player",
-					"query": "musicId=185700&index=95",
-					"scene": null
-				},
-				{
 					"id": -1,
 					"name": "pages/blog/blog",
 					"pathName": "pages/blog/blog",
