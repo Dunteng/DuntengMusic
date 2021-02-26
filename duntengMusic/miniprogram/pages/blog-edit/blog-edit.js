@@ -11,13 +11,15 @@ Page({
     wordsNum: 0, // 输入文字个数
     footerBottom: 0, //footer的bottom样式的值
     images: [],  //已选择的图片
-    selectPhoto: true //当选择图片达到九张的时候置为false
+    selectPhoto: true, //当选择图片达到九张的时候置为false
+    showTheTrueFace: false
   },
 
 
   onLoad: function (options) {
     console.log(options)
     userInfo = options //将用户昵称和头像保存
+    this.getShowTheTrueFace()
   },
 
   onInput(event){
@@ -99,6 +101,16 @@ Page({
         selectPhoto: true
       })
     }
+  },
+
+  getShowTheTrueFace(){  // 向云数据库获取页面正常显示的标志， 为了应付审查
+    wx.cloud.callFunction({
+      name: 'getShowTheTrueFace'
+    }).then(res=>{
+      this.setData({
+        showTheTrueFace: res.result[0].show
+      })
+    })
   },
 
   // 图片预览功能
